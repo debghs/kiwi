@@ -1,4 +1,5 @@
-import React from 'react'
+import PropTypes from 'prop-types';
+
 import {
   BrowserRouter as Router,
   Route,
@@ -19,7 +20,7 @@ import AddProduct from './pages/admin/page/AddProduct';
 import UpdateProduct from './pages/admin/page/UpdateProduct';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Allproducts from './pages/allproducts/Allproducts';
+import Allproducts from './pages/allProducts/AllProducts';
 function App() {
   return (
     <MyState>
@@ -64,14 +65,19 @@ export default App
 
 // user 
 
-export const ProtectedRoute = ({children}) => {
-  const user = localStorage.getItem('user')
-  if(user){
-    return children
-  }else{
-    return <Navigate to={'/login'}/>
+export const ProtectedRoute = ({ children }) => {
+  const user = localStorage.getItem('user');
+  if (user) {
+    return children;
+  } else {
+    return <Navigate to={'/login'} />;
   }
-}
+};
+
+ProtectedRoute.propTypes = {
+  children: PropTypes.node,
+};
+
 
 // admin 
 
@@ -85,4 +91,8 @@ const ProtectedRouteForAdmin = ({children})=> {
     return <Navigate to={'/login'}/>
   }
 
-}
+};
+
+ProtectedRouteForAdmin.propTypes = {
+  children: PropTypes.node.isRequired,
+};
