@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deleteFromCart } from '../../redux/cartSlice';
 import { toast } from 'react-toastify';
 import { addDoc, collection } from 'firebase/firestore';
-import { fireDB } from '../../fireabase/FirebaseConfig';
+import { fireDB } from '../../firebase/FirebaseConfig';
 
 
 function Cart() {

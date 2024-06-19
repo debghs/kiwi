@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import MyContext from './myContext'
 import { Timestamp, addDoc, collection, deleteDoc, doc, getDocs, onSnapshot, orderBy, query, setDoc } from 'firebase/firestore';
 import { toast } from 'react-toastify';
-import { fireDB } from '../../fireabase/FirebaseConfig';
+import { fireDB } from '../../firebase/FirebaseConfig';
 
 function myState(props) {
     const [mode, setMode] = useState('light');
