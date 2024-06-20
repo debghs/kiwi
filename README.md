@@ -1,6 +1,6 @@
 # Kiwi
 
-Kiwi is a highly interactive and responsive web application designed with a user-friendly interface. This project leverages modern web development technologies to provide a seamless user experience, state management, authentication, and secure payment processing.
+Kiwi is a highly interactive and responsive e-commerce web application designed with a user-friendly interface. This project leverages modern web development technologies to provide a seamless user experience, state management, authentication, and secure payment processing.
 
 ## Table of Contents
 
